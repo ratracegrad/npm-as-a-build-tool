@@ -1,0 +1,31 @@
+{
+  "name": "three",
+  "version": "1.0.0",
+  "description": "npm as a build tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha",
+    "lint": "jshint *.js **/*.js",
+    "pretest": "npm run lint"
+  },
+  "jshintConfig" : {
+    "esnext": "true",
+    "noyield" : "true"
+  },
+  "keywords": [
+    "npm",
+    "scripting"
+  ],
+  "author": "Jennifer Bland",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^1.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.2",
+    "should": "^7.1.0",
+    "supertest": "^1.1.0"
+  }
+}

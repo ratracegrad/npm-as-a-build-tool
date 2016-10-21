@@ -1,0 +1,24 @@
+{
+  "name": "two",
+  "version": "1.0.0",
+  "description": "npm as a build tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "npm",
+    "scripting"
+  ],
+  "author": "Jennifer Bland",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.2",
+    "should": "^7.1.0",
+    "supertest": "^1.1.0"
+  }
+}

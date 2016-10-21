@@ -1,0 +1,36 @@
+{
+  "name": "four",
+  "version": "1.0.0",
+  "description": "npm as a build tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test",
+    "lint": "jshint  *.js **/*.js",
+    "pretest": "npm run lint",
+    "build:less": "lessc client/less/demo.less public/css/site.css",
+    "build:bundle": "browserify ./client/js/app.js | uglifyjs -mc > ./public/js/bundle.js",
+    "build:clean": "rimraf public/css/*, public/js/*",
+    "prebuild": "npm run build:clean",
+    "build": "npm run build:less && npm run build:bundle"
+  },
+  "jshintConfig": {
+    "esnext": "true",
+    "noyield": "true"
+  },
+  "author": "Jennifer Bland",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^1.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "jshint": "^2.8.0",
+    "less": "^2.5.3",
+    "mocha": "^2.3.2",
+    "rimraf": "^2.4.3",
+    "should": "^7.1.0",
+    "supertest": "^1.1.0",
+    "uglify": "^0.1.5"
+  }
+}
