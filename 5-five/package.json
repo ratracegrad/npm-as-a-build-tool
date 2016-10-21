@@ -24,7 +24,7 @@
     "version:major": "npm version major",
     "version:minor": "npm version minor",
     "version:patch": "npm version patch",
-    "push:origin": "git push --tags origin master",
+    "push:origin": "git push origin master",
     "push:heroku": "git push heroku master",
     "push": "npm run push:origin && npm run push:heroku",
     "deploy:prod": "npm run test -s && npm run build -s && npm run version:patch && npm run push:heroku"
