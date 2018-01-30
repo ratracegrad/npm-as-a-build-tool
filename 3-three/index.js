@@ -1,11 +1,11 @@
-var app = module.exports = require("koa")();
+const express = require('express');
+const app = express();
+const port = 3000;
 
-app.use(function *(){
-	this.body = "Koa says Hi!";
+app.get('/', (req, res) => {
+    res.send('Hello World');
 });
 
-var port = process.env.PORT || (process.argv[2] || 3000);
-port = (typeof port === "number") ? port : 3000;
-
-app.listen(port);
-console.log("Application started. Listening on port:" + port);
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});

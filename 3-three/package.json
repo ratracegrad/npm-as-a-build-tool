@@ -4,28 +4,25 @@
   "description": "npm as a build tool",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "test": "mocha",
-    "lint": "jshint *.js **/*.js",
+    "lint": "eslint index.js",
     "pretest": "npm run lint"
   },
-  "jshintConfig" : {
-    "esnext": "true",
-    "noyield" : "true"
-  },
-  "keywords": [
-    "npm",
-    "scripting"
-  ],
   "author": "Jennifer Bland",
   "license": "MIT",
-  "dependencies": {
-    "koa": "^1.0.0"
-  },
   "devDependencies": {
-    "jshint": "^2.8.0",
-    "mocha": "^2.3.2",
-    "should": "^7.1.0",
-    "supertest": "^1.1.0"
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }
+
+
+
